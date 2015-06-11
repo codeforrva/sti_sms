@@ -6,7 +6,6 @@ using System.Net.Http;
 using System.Web;
 using System.Web.Mvc;
 using System.Xml.Linq;
-using Cfrva.Sti.Sms.ActionFilters;
 using Cfrva.Sti.Sms.Models;
 using Twilio;
 using Twilio.TwiML.Mvc;
