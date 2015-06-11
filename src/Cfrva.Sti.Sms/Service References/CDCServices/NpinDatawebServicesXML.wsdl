@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.cdcnping.org/NPINWebservicesXML/NPINDataWebServicesRawXML" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://www.cdcnping.org/NPINWebservicesXML/NPINDataWebServicesRawXML" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.cdcnping.org/NPINWebservicesXML/NPINDataWebServicesRawXML">
+      <s:element name="GetHIVDataByIndex">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="zip" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="radius" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="index" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetHIVDataByIndexResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetHIVDataByIndexResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetHIVDataByState">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="state" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetHIVDataByStateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetHIVDataByStateResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSTDDataByIndex">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="zip" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="radius" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="index" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSTDDataByIndexResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSTDDataByIndexResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWidgetData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="zip" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="radius" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="url" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="widgetcode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWidgetDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetWidgetDataResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSTDWidgetData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="zip" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="radius" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="url" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="widgetcode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSTDWidgetDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSTDWidgetDataResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSTDWidgetDataWithAudience">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="zip" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="radius" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="url" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="widgetcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="audience" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSTDWidgetDataWithAudienceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSTDWidgetDataWithAudienceResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWidgetDataWithAudience">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="zip" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="radius" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="url" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="widgetcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="audience" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWidgetDataWithAudienceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetWidgetDataWithAudienceResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetHIVDataByIndexSoapIn">
+    <wsdl:part name="parameters" element="tns:GetHIVDataByIndex" />
+  </wsdl:message>
+  <wsdl:message name="GetHIVDataByIndexSoapOut">
+    <wsdl:part name="parameters" element="tns:GetHIVDataByIndexResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetHIVDataByStateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetHIVDataByState" />
+  </wsdl:message>
+  <wsdl:message name="GetHIVDataByStateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetHIVDataByStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSTDDataByIndexSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSTDDataByIndex" />
+  </wsdl:message>
+  <wsdl:message name="GetSTDDataByIndexSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSTDDataByIndexResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetWidgetDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetWidgetData" />
+  </wsdl:message>
+  <wsdl:message name="GetWidgetDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetWidgetDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSTDWidgetDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSTDWidgetData" />
+  </wsdl:message>
+  <wsdl:message name="GetSTDWidgetDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSTDWidgetDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSTDWidgetDataWithAudienceSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSTDWidgetDataWithAudience" />
+  </wsdl:message>
+  <wsdl:message name="GetSTDWidgetDataWithAudienceSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSTDWidgetDataWithAudienceResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetWidgetDataWithAudienceSoapIn">
+    <wsdl:part name="parameters" element="tns:GetWidgetDataWithAudience" />
+  </wsdl:message>
+  <wsdl:message name="GetWidgetDataWithAudienceSoapOut">
+    <wsdl:part name="parameters" element="tns:GetWidgetDataWithAudienceResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetHIVDataByIndexHttpGetIn">
+    <wsdl:part name="zip" type="s:string" />
+    <wsdl:part name="radius" type="s:string" />
+    <wsdl:part name="index" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetHIVDataByIndexHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="GetHIVDataByStateHttpGetIn">
+    <wsdl:part name="state" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetHIVDataByStateHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="GetSTDDataByIndexHttpGetIn">
+    <wsdl:part name="zip" type="s:string" />
+    <wsdl:part name="radius" type="s:string" />
+    <wsdl:part name="index" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSTDDataByIndexHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="GetWidgetDataHttpGetIn">
+    <wsdl:part name="zip" type="s:string" />
+    <wsdl:part name="radius" type="s:string" />
+    <wsdl:part name="url" type="s:string" />
+    <wsdl:part name="widgetcode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetWidgetDataHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="GetSTDWidgetDataHttpGetIn">
+    <wsdl:part name="zip" type="s:string" />
+    <wsdl:part name="radius" type="s:string" />
+    <wsdl:part name="url" type="s:string" />
+    <wsdl:part name="widgetcode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSTDWidgetDataHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="GetSTDWidgetDataWithAudienceHttpGetIn">
+    <wsdl:part name="zip" type="s:string" />
+    <wsdl:part name="radius" type="s:string" />
+    <wsdl:part name="url" type="s:string" />
+    <wsdl:part name="widgetcode" type="s:string" />
+    <wsdl:part name="audience" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSTDWidgetDataWithAudienceHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="GetWidgetDataWithAudienceHttpGetIn">
+    <wsdl:part name="zip" type="s:string" />
+    <wsdl:part name="radius" type="s:string" />
+    <wsdl:part name="url" type="s:string" />
+    <wsdl:part name="widgetcode" type="s:string" />
+    <wsdl:part name="audience" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetWidgetDataWithAudienceHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:portType name="NPINDataWebservicesSoap">
+    <wsdl:operation name="GetHIVDataByIndex">
+      <wsdl:input message="tns:GetHIVDataByIndexSoapIn" />
+      <wsdl:output message="tns:GetHIVDataByIndexSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHIVDataByState">
+      <wsdl:input message="tns:GetHIVDataByStateSoapIn" />
+      <wsdl:output message="tns:GetHIVDataByStateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSTDDataByIndex">
+      <wsdl:input message="tns:GetSTDDataByIndexSoapIn" />
+      <wsdl:output message="tns:GetSTDDataByIndexSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWidgetData">
+      <wsdl:input message="tns:GetWidgetDataSoapIn" />
+      <wsdl:output message="tns:GetWidgetDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSTDWidgetData">
+      <wsdl:input message="tns:GetSTDWidgetDataSoapIn" />
+      <wsdl:output message="tns:GetSTDWidgetDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSTDWidgetDataWithAudience">
+      <wsdl:input message="tns:GetSTDWidgetDataWithAudienceSoapIn" />
+      <wsdl:output message="tns:GetSTDWidgetDataWithAudienceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWidgetDataWithAudience">
+      <wsdl:input message="tns:GetWidgetDataWithAudienceSoapIn" />
+      <wsdl:output message="tns:GetWidgetDataWithAudienceSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="NPINDataWebservicesHttpGet">
+    <wsdl:operation name="GetHIVDataByIndex">
+      <wsdl:input message="tns:GetHIVDataByIndexHttpGetIn" />
+      <wsdl:output message="tns:GetHIVDataByIndexHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHIVDataByState">
+      <wsdl:input message="tns:GetHIVDataByStateHttpGetIn" />
+      <wsdl:output message="tns:GetHIVDataByStateHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSTDDataByIndex">
+      <wsdl:input message="tns:GetSTDDataByIndexHttpGetIn" />
+      <wsdl:output message="tns:GetSTDDataByIndexHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWidgetData">
+      <wsdl:input message="tns:GetWidgetDataHttpGetIn" />
+      <wsdl:output message="tns:GetWidgetDataHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSTDWidgetData">
+      <wsdl:input message="tns:GetSTDWidgetDataHttpGetIn" />
+      <wsdl:output message="tns:GetSTDWidgetDataHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSTDWidgetDataWithAudience">
+      <wsdl:input message="tns:GetSTDWidgetDataWithAudienceHttpGetIn" />
+      <wsdl:output message="tns:GetSTDWidgetDataWithAudienceHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWidgetDataWithAudience">
+      <wsdl:input message="tns:GetWidgetDataWithAudienceHttpGetIn" />
+      <wsdl:output message="tns:GetWidgetDataWithAudienceHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NPINDataWebservicesSoap" type="tns:NPINDataWebservicesSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetHIVDataByIndex">
+      <soap:operation soapAction="http://www.cdcnping.org/NPINWebservicesXML/NPINDataWebServicesRawXML/GetHIVDataByIndex" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHIVDataByState">
+      <soap:operation soapAction="http://www.cdcnping.org/NPINWebservicesXML/NPINDataWebServicesRawXML/GetHIVDataByState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSTDDataByIndex">
+      <soap:operation soapAction="http://www.cdcnping.org/NPINWebservicesXML/NPINDataWebServicesRawXML/GetSTDDataByIndex" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWidgetData">
+      <soap:operation soapAction="http://www.cdcnping.org/NPINWebservicesXML/NPINDataWebServicesRawXML/GetWidgetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSTDWidgetData">
+      <soap:operation soapAction="http://www.cdcnping.org/NPINWebservicesXML/NPINDataWebServicesRawXML/GetSTDWidgetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSTDWidgetDataWithAudience">
+      <soap:operation soapAction="http://www.cdcnping.org/NPINWebservicesXML/NPINDataWebServicesRawXML/GetSTDWidgetDataWithAudience" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWidgetDataWithAudience">
+      <soap:operation soapAction="http://www.cdcnping.org/NPINWebservicesXML/NPINDataWebServicesRawXML/GetWidgetDataWithAudience" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="NPINDataWebservicesSoap12" type="tns:NPINDataWebservicesSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetHIVDataByIndex">
+      <soap12:operation soapAction="http://www.cdcnping.org/NPINWebservicesXML/NPINDataWebServicesRawXML/GetHIVDataByIndex" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHIVDataByState">
+      <soap12:operation soapAction="http://www.cdcnping.org/NPINWebservicesXML/NPINDataWebServicesRawXML/GetHIVDataByState" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSTDDataByIndex">
+      <soap12:operation soapAction="http://www.cdcnping.org/NPINWebservicesXML/NPINDataWebServicesRawXML/GetSTDDataByIndex" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWidgetData">
+      <soap12:operation soapAction="http://www.cdcnping.org/NPINWebservicesXML/NPINDataWebServicesRawXML/GetWidgetData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSTDWidgetData">
+      <soap12:operation soapAction="http://www.cdcnping.org/NPINWebservicesXML/NPINDataWebServicesRawXML/GetSTDWidgetData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSTDWidgetDataWithAudience">
+      <soap12:operation soapAction="http://www.cdcnping.org/NPINWebservicesXML/NPINDataWebServicesRawXML/GetSTDWidgetDataWithAudience" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWidgetDataWithAudience">
+      <soap12:operation soapAction="http://www.cdcnping.org/NPINWebservicesXML/NPINDataWebServicesRawXML/GetWidgetDataWithAudience" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="NPINDataWebservicesHttpGet" type="tns:NPINDataWebservicesHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="GetHIVDataByIndex">
+      <http:operation location="/GetHIVDataByIndex" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHIVDataByState">
+      <http:operation location="/GetHIVDataByState" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSTDDataByIndex">
+      <http:operation location="/GetSTDDataByIndex" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWidgetData">
+      <http:operation location="/GetWidgetData" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSTDWidgetData">
+      <http:operation location="/GetSTDWidgetData" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSTDWidgetDataWithAudience">
+      <http:operation location="/GetSTDWidgetDataWithAudience" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWidgetDataWithAudience">
+      <http:operation location="/GetWidgetDataWithAudience" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="NPINDataWebservices">
+    <wsdl:port name="NPINDataWebservicesSoap" binding="tns:NPINDataWebservicesSoap">
+      <soap:address location="https://npin.cdc.gov/npinwebservices/NpinDatawebServicesRawXML/NpinDatawebServicesXML.asmx" />
+    </wsdl:port>
+    <wsdl:port name="NPINDataWebservicesSoap12" binding="tns:NPINDataWebservicesSoap12">
+      <soap12:address location="https://npin.cdc.gov/npinwebservices/NpinDatawebServicesRawXML/NpinDatawebServicesXML.asmx" />
+    </wsdl:port>
+    <wsdl:port name="NPINDataWebservicesHttpGet" binding="tns:NPINDataWebservicesHttpGet">
+      <http:address location="https://npin.cdc.gov/npinwebservices/NpinDatawebServicesRawXML/NpinDatawebServicesXML.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
