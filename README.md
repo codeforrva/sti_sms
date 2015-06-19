@@ -1,5 +1,5 @@
 # sti_sms
-An SMS/  zipcode based STI clinic locator
+An SMS / zipcode based STI clinic locator
 
 This application uses a CDC web service to locate STI test clinics based on zipcode and return the top 3 results via SMS.
 
